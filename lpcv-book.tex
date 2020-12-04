@@ -1,0 +1,90 @@
+\documentclass[Alon2,singlecolor,11pt]{Alon}
+\usepackage{fixltx2e,fix-cm}
+\usepackage[english]{babel}
+\usepackage{epigrafica}
+\usepackage[LGR,OT1]{fontenc}
+%\usepackage{mathptmx,txfonts}
+\usepackage{lmodern}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{makeidx}
+\usepackage{multicol}
+
+\renewcommand{\sfdefault}{txss}
+
+\usepackage{changepage}% for text width to include margin
+
+\frenchspacing
+\tolerance=5000
+
+\makeindex
+
+\include{frontmatter/preamble}%place custom commands and macros here
+\usepackage{version}
+
+\title{Low-Power Computer Vision}
+\author{Yours Truly}
+
+%
+% If you need any additional packages, add them to my-settings.txt
+%
+\input{my-settings}
+
+%
+% Please do not change anything below this line. 
+%
+
+\begin{document}
+
+\frontmatter
+
+%%%\maketitle%This is a placeholder titlepage, it will not be final.
+
+%%%Placeholder for front matter
+
+%\halftitle
+
+\booktitle
+
+%\locpage
+
+%\include{frontmatter/dedication}
+%\cleardoublepage
+%%\listoffigures
+%%\listoftables
+%\include{frontmatter/foreword}
+
+\tableofcontents
+
+%\include{frontmatter/preface}
+%\include{frontmatter/contributor}
+
+
+%\mainmatter
+
+
+\setcounter{page}{1} %previous pages reserved for frontmatter to be added later
+\pagenumbering{arabic}
+\part{This is a Part}
+%\include{chapters/chapter1/ch1}
+
+\setcounter{chapter}{10}
+%\include{chapters/chapter2/ch2}
+
+% Please do not change anything here.
+% Most importantly, do NOT change the name of the main file within your chapters.
+
+\include{chapters/my-chapter/my-chapter}
+
+\bibliographystyle{plain}
+
+% Authors, please make sure you put your bibtex in the bibliography folder. I did not create
+% default bib for anyone. Try to make sure your bibtex keys do not collide with others by using
+% unique identifiers or prefixing your bibtex entries accordingly. 
+\bibliography{bibtex-example,bibliography/my-bibliography}
+
+\printindex
+\cleardoublepage
+\end{document}
